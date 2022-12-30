@@ -1,0 +1,149 @@
+.cardFilling {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1.8fr;
+  height: 90vh;
+}
+
+.leftIcon {
+  float: left;
+  margin-right: -1rem;
+  margin-left: 6rem;
+  margin-top: 0.08rem;
+}
+
+.cardMoreDesign {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+}
+
+.cardBox {
+  margin-right: 13rem;
+  margin-top: 5rem;
+}
+
+.image {
+  width: 55%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.formBox {
+  -webkit-box-shadow: -8px 3px 10px -6px rgb(199, 199, 199);
+  -moz-box-shadow: -8px 3px 10px -6px rgb(199, 199, 199);
+  box-shadow: -8px 3px 10px -6px rgb(199, 199, 199);
+  margin-bottom: -1rem;
+}
+
+.details {
+  padding: 0 2rem;
+  text-align: start;
+  margin-top: 15rem;
+  font-size: 1rem;
+  letter-spacing: 0.1px;
+}
+
+.kuyovInput {
+  border: none;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  padding: 0.3rem;
+  outline: none;
+}
+
+.kuyovInput::placeholder {
+  font-weight: 500;
+  color: rgb(188, 188, 188);
+}
+
+.kelinInput {
+  border: none;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  padding: 0;
+  outline: none;
+}
+
+.kelinInput::placeholder {
+  font-weight: 500;
+  color: rgb(188, 188, 188);
+}
+
+.and {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.phoneInput {
+  border: none;
+  border-bottom: 1px solid rgb(217, 217, 217);
+  padding: 0.3rem;
+  grid-column: 1/4;
+  outline: none;
+}
+
+.phoneInput::placeholder {
+  font-weight: 500;
+  color: rgb(188, 188, 188);
+}
+
+.nextButton {
+  border: none;
+  background-color: rgb(27, 181, 188);
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  grid-column: 1/4;
+}
+
+@media (max-width: 1023px) {
+  .cardFilling {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  .leftIcon {
+    float: left;
+    margin-right: 0;
+    margin-left: 1rem;
+    margin-top: 0.08rem;
+  }
+
+  .cardMoreDesign {
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+    text-align: start;
+  }
+
+  .cardBox {
+    order: 2;
+  }
+  .formBox {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: -1rem;
+  }
+
+  .details {
+    margin-top: -5rem;
+  }
+
+  .cardBox {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .image {
+    width: 70%;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+}

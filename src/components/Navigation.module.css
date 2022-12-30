@@ -1,0 +1,16 @@
+.NavContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+.logo {
+  text-decoration: none;
+  color: rgb(20, 179, 186);
+}
+
+.login {
+  color: rgb(20, 179, 186);
+  text-decoration: none;
+}
