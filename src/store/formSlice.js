@@ -65,6 +65,23 @@ const formSlice = createSlice({
       state.formOrder = false;
       state.formOrder2 = !state.formOrder2;
     },
+    reset: (state) => {
+      state.formOrder1 = true;
+      state.formOrder = false;
+      state.card_id = 1;
+      state.cardImage = '';
+      state.groom = '';
+      state.bride = '';
+      state.phoneNumber = '';
+      state.date = '';
+      state.phoneNumber = '';
+      state.time = '';
+      state.location = '';
+      state.finalImage = '';
+      state.error = '';
+      state.formOrder2 = false;
+      state.loading = false;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCreateInvitations.pending, (state) => {
@@ -81,6 +98,6 @@ const formSlice = createSlice({
   },
 });
 
-export const { chooseCard, moveCard, formOne, formTwo, linkCard } =
+export const { chooseCard, moveCard, formOne, formTwo, linkCard, reset } =
   formSlice.actions;
 export default formSlice.reducer;

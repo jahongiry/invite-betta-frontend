@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import classes from './FormTwo';
+import classes from './FinalInvitation.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { moveCard, formTwo } from '../store/formSlice';
-import { fetchCreateInvitations } from '../store/formSlice';
+import { fetchCreateInvitations, reset } from '../store/formSlice';
 
 function FinalInvitation() {
   const dispatch = useDispatch();
@@ -14,15 +14,15 @@ function FinalInvitation() {
   }, [state2]);
   return (
     <div>
-      <Link onClick={() => dispatch(moveCard())} className={classes.ortga}>
+      <Link to='/' className={classes.ortga} onClick={() => dispatch(reset())}>
         <div className={classes.icon}>
           {' '}
-          <ion-icon name='chevron-back-outline'></ion-icon>
+          <ion-icon name='home-outline'></ion-icon>
         </div>
-        <h5>Ortga qaytish</h5>
+        <h5>Boshidan yaratish</h5>
       </Link>
       <div className={classes.details}>
-        <h1>final invitaion</h1>
+        <h1>Baxtli onigiz uchun taklifnomaniz tayyor!</h1>
       </div>
     </div>
   );

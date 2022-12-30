@@ -3,7 +3,6 @@ import classes from './Header.module.css';
 import search from '../img/search-icon.png';
 import Typical from 'react-typical';
 import Body from './Body';
-import Footer from './Footer';
 
 function Header() {
   return (
@@ -43,7 +42,6 @@ function Header() {
         <div className={classes.container2}></div>
       </div>
       <Body />
-      <Footer />
     </div>
   );
 }
