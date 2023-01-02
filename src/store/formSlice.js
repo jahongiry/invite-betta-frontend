@@ -22,7 +22,6 @@ const initialState = {
 export const fetchCreateInvitations = createAsyncThunk(
   'invites/fetchCreateInvitation',
   async (payload) => {
-    console.log(payload.date);
     return axios
       .post('http://localhost:3000/weddings', {
         kuyov: payload.groom,

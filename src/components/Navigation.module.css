@@ -1,7 +1,6 @@
 .NavContainer {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 5rem;
   border-bottom: 1px solid rgb(217, 217, 217);
 }
 
@@ -11,6 +10,27 @@
 }
 
 .login {
+  margin: 2rem 5rem;
   color: rgb(20, 179, 186);
   text-decoration: none;
+}
+
+.logoImage {
+  width: 20%;
+  border-radius: 50%;
+}
+
+@media (max-width: 1023px) {
+  .login {
+    margin: 1rem;
+    margin-top: 1.3rem;
+    color: rgb(20, 179, 186);
+    text-decoration: none;
+  }
+
+  .logoImage {
+    width: 25%;
+    border-radius: 50%;
+    margin-left: -10rem;
+  }
 }

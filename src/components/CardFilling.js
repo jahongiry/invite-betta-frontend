@@ -38,7 +38,11 @@ function CardFilling() {
         </Link>
       )}
       {!card_order1 && (
-        <Link to='/' className={classes.cardMoreDesign2}>
+        <Link
+          to='/'
+          className={classes.cardMoreDesign2}
+          onClick={() => dispatch(reset())}
+        >
           <div className={classes.leftIcon}>
             <ion-icon name='chevron-back-outline'></ion-icon>
           </div>

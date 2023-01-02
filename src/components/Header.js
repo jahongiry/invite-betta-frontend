@@ -1,7 +1,5 @@
 import React from 'react';
 import classes from './Header.module.css';
-import search from '../img/search-icon.png';
-import Typical from 'react-typical';
 import Body from './Body';
 
 function Header() {
@@ -9,17 +7,6 @@ function Header() {
     <div>
       <div className={classes.header}>
         <div className={classes.container1}>
-          {/* <Typical
-            className={classes.headingText}
-            steps={[
-              'Assalomu alekum',
-              2000,
-              'Taklifonomalaringizni biz bilan yasang!',
-              1000,
-            ]}
-            loop={1}
-            wrapper='p'
-          /> */}
           <h1 className={classes.headingText}>
             Taklifonomalaringizni biz bilan yarating!
           </h1>

@@ -22,10 +22,22 @@
   letter-spacing: 0.1px;
 }
 
+.loader {
+  margin-left: 10rem;
+}
+
+.tayyorlanmoqda {
+  text-align: center;
+}
+
 @media (max-width: 1023px) {
   .details {
     text-align: center;
     padding: 0 2rem;
     margin-top: 2rem;
+  }
+
+  .loader {
+    margin-left: auto;
   }
 }

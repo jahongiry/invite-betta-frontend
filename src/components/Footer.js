@@ -3,7 +3,7 @@ import classes from './Footer.module.css';
 
 function Footer() {
   return (
-    <div className={classes.footer}>© 2020 Copyright: Jahongir Yusupov</div>
+    <div className={classes.footer}>© 2023 Copyright: Jahongir Yusupov</div>
   );
 }
 
