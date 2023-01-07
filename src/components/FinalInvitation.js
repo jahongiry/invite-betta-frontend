@@ -6,19 +6,35 @@ import { moveCard, formTwo } from '../store/formSlice';
 import { fetchCreateInvitations, reset } from '../store/formSlice';
 import { CircleLoading } from 'react-loadingg';
 import PropagateLoader from 'react-spinners/PropagateLoader';
+import resetB from '../store/formSliceB';
+import { fetchCreateInvitationsB } from '../store/formSliceB';
 
 function FinalInvitation() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.form);
+  const stateB = useSelector((state) => state.formB);
   const state2 = useSelector((state) => state.form.formOrder2);
   const finalimage = useSelector((state) => state.form.finalImage);
+  const typeState = useSelector((state) => state.type);
 
   useEffect(() => {
-    dispatch(fetchCreateInvitations(state));
+    if (typeState.wedding) {
+      dispatch(fetchCreateInvitations(state));
+    }
+    if (typeState.birthday) {
+      dispatch(fetchCreateInvitationsB(stateB));
+    }
   }, [state2]);
   return (
     <div>
-      <Link to='/' className={classes.ortga} onClick={() => dispatch(reset())}>
+      <Link
+        to='/'
+        className={classes.ortga}
+        onClick={() => {
+          dispatch(reset());
+          dispatch(resetB());
+        }}
+      >
         <div className={classes.icon}>
           <ion-icon name='home-outline'></ion-icon>
         </div>

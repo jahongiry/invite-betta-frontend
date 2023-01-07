@@ -58,6 +58,11 @@
   text-shadow: -7px 3px 8px rgba(0, 0, 0, 0.38);
 }
 
+.headingText2 {
+  font-size: 1.2rem;
+  text-shadow: -7px 3px 8px rgba(0, 0, 0, 0.38);
+}
+
 .submitInput {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1rem;
@@ -78,6 +83,10 @@
 }
 
 @media (max-width: 1023px) {
+  .headingText2 {
+    margin-bottom: -2rem;
+  }
+
   .header {
     display: grid;
     grid-template-columns: 1fr;

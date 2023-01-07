@@ -10,9 +10,14 @@
 }
 
 .login {
+  display: flex;
   margin: 2rem 5rem;
   color: rgb(20, 179, 186);
   text-decoration: none;
+}
+.loginIcon {
+  font-size: 1.3rem;
+  margin-right: 0.2rem;
 }
 
 .logoImage {

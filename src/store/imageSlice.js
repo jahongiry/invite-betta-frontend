@@ -1,9 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { act } from 'react-dom/test-utils';
 
 const initialState = {
   loading: false,
   image: [],
+  imageBirthday: [],
   error: '',
   data: [],
 };
@@ -23,7 +25,17 @@ const imageSlice = createSlice({
     });
     builder.addCase(fetchImages.fulfilled, (state, action) => {
       state.loading = false;
-      state.image = action.payload;
+      let wedding = [];
+      let birthday = [];
+      for (let i = 0; i < action.payload.length; i++) {
+        if (action.payload[i][0].length > 4) {
+          birthday.push(action.payload[i]);
+        } else {
+          wedding.push(action.payload[i]);
+        }
+      }
+      state.image = wedding;
+      state.imageBirthday = birthday;
     });
     builder.addCase(fetchImages.rejected, (state, action) => {
       state.loading = false;

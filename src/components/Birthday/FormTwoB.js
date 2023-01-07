@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import classes from './FormTwo.module.css';
+import classes from './FormTwoB.module.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import TimePicker from 'react-time-picker';
 import 'react-time-picker/dist/TimePicker.css';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { moveCard, formTwo } from '../store/formSlice';
+import { moveCard, formTwo } from '../../store/formSliceB';
 import { useRef } from 'react';
 
-function FormTwo() {
+function FormTwoB() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [value, onChange] = useState('17:00');
   const [manzilim, setManzilim] = useState('');
@@ -18,7 +18,7 @@ function FormTwo() {
   const sana = useRef('');
   const soat = useRef('');
   const manzil = useRef('');
-  const state = useSelector((state) => state.form);
+  const state = useSelector((state) => state.formB);
   const handleChange = (event) => {
     setManzilim(event.target.value);
   };
@@ -44,7 +44,7 @@ function FormTwo() {
         <h5>Ortga qaytish</h5>
       </Link>
       <div className={classes.details}>
-        <h1>Salom, so'ngi malumotlarni kiritamiz.</h1>
+        <h1>Salom, Jahongir! Yana malumotlar kiritamiz.</h1>
         <form className={classes.form} onSubmit={handleSubmit}>
           <DatePicker
             selected={selectedDate}
@@ -77,4 +77,4 @@ function FormTwo() {
   );
 }
 
-export default FormTwo;
+export default FormTwoB;

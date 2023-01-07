@@ -7,6 +7,7 @@ import { fetchImages } from '../store/imageSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import userEvent from '@testing-library/user-event';
 import Types from './Types';
+import { birthdayForm, weddingForm } from '../store/typeSlice';
 
 function Body() {
   const images = useSelector((state) => state.image);
@@ -25,8 +26,15 @@ function Body() {
         <div>Error: {images.error}</div>
       ) : null}
       {typeState.wedding && !images.loading && images.image.length ? (
-        <div className={classes.cards}>
+        <div className={classes.cards} onClick={() => dispatch(weddingForm())}>
           {images.image.map((card) => (
+            <Card key={card[0]} image={card[1]} card_id={card[0]} />
+          ))}
+        </div>
+      ) : null}
+      {typeState.birthday && !images.loading && images.image.length ? (
+        <div className={classes.cards} onClick={() => dispatch(birthdayForm())}>
+          {images.imageBirthday.map((card) => (
             <Card key={card[0]} image={card[1]} card_id={card[0]} />
           ))}
         </div>
