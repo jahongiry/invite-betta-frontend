@@ -11,7 +11,6 @@ function Header() {
     localStorage.setItem('telefon', telefon.current.value);
   };
   const user = localStorage.getItem('userName');
-  console.log(user);
   return (
     <div>
       <div className={classes.header}>
