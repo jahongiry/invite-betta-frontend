@@ -8,13 +8,13 @@ function FormOne() {
   const dispatch = useDispatch();
   const kuyov = useRef('');
   const kelin = useRef('');
-  const telefon = useRef('');
+  const mehmon = useRef('');
 
   const handleSubmit = (event) => {
     let payload = {
       kuyov: kuyov.current.value,
       kelin: kelin.current.value,
-      telefon: telefon.current.value,
+      telefon: mehmon.current.value,
     };
     dispatch(formOne(payload));
     dispatch(moveCard());
@@ -40,8 +40,8 @@ function FormOne() {
         <input
           className={classes.phoneInput}
           type='integer'
-          ref={telefon}
-          placeholder='Tel: +998...'
+          ref={mehmon}
+          placeholder='Mehmonning ismini kiriting (ihtiyoriy)'
         ></input>
         <button
           onClick={handleSubmit}

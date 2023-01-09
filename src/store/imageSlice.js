@@ -11,9 +11,11 @@ const initialState = {
 };
 
 export const fetchImages = createAsyncThunk('images/fetchImages', async () => {
-  return axios.get('http://localhost:3000/image').then((response) => {
-    return response.data;
-  });
+  return axios
+    .get('https://octopus-app-iohhm.ondigitalocean.app/image')
+    .then((response) => {
+      return response.data;
+    });
 });
 
 const imageSlice = createSlice({
@@ -28,7 +30,7 @@ const imageSlice = createSlice({
       let wedding = [];
       let birthday = [];
       for (let i = 0; i < action.payload.length; i++) {
-        if (action.payload[i][0].length > 4) {
+        if (action.payload[i][0].length > 1) {
           birthday.push(action.payload[i]);
         } else {
           wedding.push(action.payload[i]);

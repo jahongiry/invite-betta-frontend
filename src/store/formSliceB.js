@@ -23,7 +23,7 @@ export const fetchCreateInvitationsB = createAsyncThunk(
   'invites/fetchCreateInvitation',
   async (payload) => {
     return axios
-      .post('http://localhost:3000/birthdays', {
+      .post('https://octopus-app-iohhm.ondigitalocean.app/birthdays', {
         mehmon: payload.mehmon,
         mezbon: payload.mezbon,
         card: payload.card_id,

@@ -59,8 +59,10 @@
 }
 
 .headingText2 {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.685);
   font-size: 1.2rem;
-  text-shadow: -7px 3px 8px rgba(0, 0, 0, 0.38);
+  text-shadow: -7px 3px 8px rgba(0, 0, 0, 0.164);
 }
 
 .submitInput {

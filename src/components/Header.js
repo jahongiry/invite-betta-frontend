@@ -17,13 +17,13 @@ function Header() {
       <div className={classes.header}>
         <div className={classes.container1}>
           <h1 className={classes.headingText}>
-            Taklifonomalaringizni biz bilan yarating!
+            Taklifnomalaringizni biz bilan yarating!
           </h1>
           {user && (
             <div>
               <h2 className={classes.headingText2}>
                 Quyidagilardan tanlang va soniyalar ichida <br />
-                taklifnomalaringizni yarating
+                taklifnomalaringizni yarating!
               </h2>
             </div>
           )}

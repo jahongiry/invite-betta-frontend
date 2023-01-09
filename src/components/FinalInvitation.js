@@ -49,7 +49,7 @@ function FinalInvitation() {
             </div>
           </div>
         )}
-        {finalimage && <h1>Baxtli onigiz uchun taklifnomangiz tayyor!</h1>}
+        {finalimage && <h1>Baxtli oningiz uchun taklifnomangiz tayyor!</h1>}
       </div>
     </div>
   );
