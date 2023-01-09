@@ -10,6 +10,7 @@ function Header() {
     localStorage.setItem('userName', userName.current.value);
     localStorage.setItem('telefon', telefon.current.value);
   };
+
   const user = localStorage.getItem('userName');
   return (
     <div>
